@@ -36,7 +36,7 @@ Questions:{input}
 def vector_embedding():
 
     if "vectors" not in st.session_state:
-        with st.spinner('Loading documents Please wiat'):
+        with st.spinner('Loading documents Please wait'):
             st.session_state.embeddings=GoogleGenerativeAIEmbeddings(model = "models/embedding-001")
             st.session_state.loader=PyPDFDirectoryLoader("./docs") ## Data Ingestion
             st.session_state.docs=st.session_state.loader.load() ## Document Loading
